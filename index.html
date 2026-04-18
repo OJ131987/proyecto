@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Proyecto C | Transporte Excavadora 25T</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body { background:#0b0f1a; }
+h1,h2,h3 { color:#00e0ff; }
+p,li { font-size:20px; }
+
+.highlight { color:#00ffcc; font-weight:bold; }
+
+.card {
+background:#101728;
+border:1px solid #00e0ff;
+padding:15px;
+border-radius:10px;
+margin:10px;
+}
+
+.grid {
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+img {
+width:100%;
+border-radius:10px;
+}
+
+iframe {
+border-radius:10px;
+border:1px solid #222;
+}
+
+.kpi {
+font-size:35px;
+color:#00ffcc;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- PORTADA -->
+<section>
+<h2>🚢 Transporte Internacional</h2>
+<h3>Excavadora 25 Toneladas</h3>
+<p>Proyecto C – Equipo No. 2</p>
+<p class="highlight">Texas → Panamá</p>
+</section>
+
+<!-- IMAGEN REAL -->
+<section>
+<h3>📸 Tipo de Maquinaria</h3>
+<img src="https://images.unsplash.com/photo-1581093588401-22d3f9bfa5c4">
+<p>Excavadora hidráulica (carga OOG)</p>
+</section>
+
+<!-- VIDEO -->
+<section>
+<h3>🎥 Operación Ro-Ro</h3>
+<iframe width="100%" height="400"
+src="https://www.youtube.com/embed/3p0wXlV9G6E"
+title="RoRo operation"
+allowfullscreen></iframe>
+</section>
+
+<!-- RESUMEN -->
+<section>
+<h3>📊 Resumen Ejecutivo</h3>
+<div class="grid">
+<div class="card">
+<p>Modalidad: <span class="highlight">Ro-Ro</span></p>
+<p>Tiempo: 14 días</p>
+</div>
+
+<div class="card">
+<p>Costo Total</p>
+<div class="kpi">$11K – $13K</div>
+</div>
+</div>
+</section>
+
+<!-- MAPA -->
+<section>
+<h3>🌍 Ruta Real</h3>
+<iframe width="100%" height="400"
+src="https://maps.google.com/maps?q=Houston%20Texas&t=&z=4&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<!-- PROCESO -->
+<section>
+<h3>⚙️ Flujo Operativo</h3>
+<ol>
+<li>Pickup Texas</li>
+<li>Puerto Houston</li>
+<li>Ro-Ro</li>
+<li>Colón</li>
+<li>Aduana</li>
+<li>Entrega final</li>
+</ol>
+</section>
+
+<!-- COSTOS -->
+<section>
+<h3>💰 Costos</h3>
+<canvas id="chart"></canvas>
+</section>
+
+<!-- RIESGOS -->
+<section>
+<h3>⚠️ Riesgos</h3>
+<ul>
+<li>Daños → Seguro</li>
+<li>Retrasos</li>
+<li>Aduana</li>
+</ul>
+</section>
+
+<!-- CIERRE -->
+<section>
+<h2>🚀 Operación Exitosa</h2>
+<p class="highlight">Eficiente • Segura • Rentable</p>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+Reveal.initialize();
+
+new Chart(document.getElementById('chart'), {
+type: 'bar',
+data: {
+labels: ['USA','Puerto','Marítimo','Seguro','Aduana','Panamá','Impuestos'],
+datasets: [{
+label: 'USD',
+data: [1200,500,2800,700,300,1200,5000]
+}]
+}
+});
+</script>
+
+</body>
+</html>
